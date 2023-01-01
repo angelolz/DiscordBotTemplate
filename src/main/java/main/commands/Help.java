@@ -1,6 +1,5 @@
 package main.commands;
 
-import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.SlashCommand;
 import main.DiscordBot;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -32,19 +31,11 @@ public class Help extends SlashCommand
                 embed.setFooter("Created by " + user.getAsTag() + " | Version " + DiscordBot.getVersion(), user.getAvatarUrl());
                 embed.setThumbnail(slashCommandEvent.getJDA().getSelfUser().getAvatarUrl());
 
-                for(Command command : getClient().getCommands())
+                for(SlashCommand command : getClient().getSlashCommands())
                 {
                     if(!command.isHidden() && !command.isOwnerCommand())
                     {
                         String commandName = String.format("/%s", command.getName());
-                        if(command.getAliases().length > 0)
-                        {
-                            String[] aliases = command.getAliases();
-                            for (String alias : aliases)
-                            {
-                                commandName = commandName.concat("/" + alias);
-                            }
-                        }
 
                         embed.addField(commandName, command.getHelp(), true);
                     }
