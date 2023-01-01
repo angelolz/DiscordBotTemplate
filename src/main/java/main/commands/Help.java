@@ -8,6 +8,12 @@ import net.dv8tion.jda.api.events.interaction.SlashCommandEvent;
 
 public class Help extends SlashCommand
 {
+    public Help() {
+        this.name = "help";
+        this.help = "Shows all commands available to be used!";
+        this.cooldown = 3;
+    }
+
     @Override
     protected void execute(SlashCommandEvent slashCommandEvent)
     {

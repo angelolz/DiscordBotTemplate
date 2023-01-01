@@ -7,7 +7,7 @@ public class Ping extends SlashCommand
 {
     public Ping() {
         this.name = "ping";
-        this.help = ":ping_pong: Pong!";
+        this.help = "🏓 Pong!";
         this.cooldown = 3;
     }
 
