@@ -2,7 +2,7 @@
 This is the base code that I use that appears in all the bots that I've created. This includes [Animal Crossing Bot](http://angelolz.dev/acbot) 
 and [Wordie](http://angelolz.dev/wordie).
 
-# Depedencies
+# Dependencies
 This project comes with a few dependencies that will aid in the development of the Discord bot.
 
 - JDA *(Discord API wrapper)*
