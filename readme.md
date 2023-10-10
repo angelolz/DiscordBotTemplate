@@ -1,6 +1,6 @@
 # Java Discord Bot Template
-This is the base code that I use that appears in all the bots that I've created. This includes [Animal Crossing Bot](http://angelolz.dev/acbot) 
-and [Wordie](http://angelolz.dev/wordie).
+This is the base code that I use that appears in all the bots that I've created. This includes [Animal Crossing Bot](https://angelolz.one/acbot) 
+and [Wordie](https://angelolz.one/wordie).
 
 # Dependencies
 This project comes with a few dependencies that will aid in the development of the Discord bot.
