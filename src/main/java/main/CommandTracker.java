@@ -7,7 +7,6 @@ public class CommandTracker
 {
     protected static final Map<String, Integer> textTracker = new HashMap<>();
     protected static final Map<String, Integer> slashTracker = new HashMap<>();
-    protected static final Map<String, Integer> lookupTracker = new HashMap<>();
 
 
     public static String getUsageCounts(String commandName)

@@ -4,6 +4,7 @@ import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jdautilities.command.SlashCommand;
 import com.jagrosh.jdautilities.command.SlashCommandEvent;
+import main.BotManager;
 import main.CommandTracker;
 import main.ConfigManager;
 import net.dv8tion.jda.api.EmbedBuilder;
@@ -38,6 +39,7 @@ public class Help extends SlashCommand
     protected void execute(CommandEvent event)
     {
         CommandTracker.incrementTextCount("help");
+
         String ownerId = event.getClient().getOwnerId();
 
         event.getJDA().retrieveUserById(ownerId).queue(
@@ -55,7 +57,7 @@ public class Help extends SlashCommand
         embed.setTitle("Discord Bot")
              .setColor(0x32CD32)
              .setDescription("Here are a list of commands you can use!")
-             .setFooter("Created by " + user.getAsTag() + " | Version " + ConfigManager.getVersion(), user.getAvatarUrl())
+             .setFooter(String.format("Created by: %s | Version: %s%nUptime: %s", user.getName(), ConfigManager.getVersion(), BotManager.getUptime()))
              .setThumbnail(botAvatarUrl);
 
         for(Command command : commands)

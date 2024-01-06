@@ -15,7 +15,7 @@ public class Ping extends SlashCommand
     {
         this.name = "ping";
         this.aliases = new String[]{ "pong" };
-        this.help = ":ping_pong: Pong! Check the latency of the Animal Crossing Bot.";
+        this.help = ":ping_pong: Pong! Check the latency of the bot.";
         this.cooldown = 3;
     }
 

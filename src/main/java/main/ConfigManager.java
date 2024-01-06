@@ -10,15 +10,17 @@ public class ConfigManager
     private static final String VERSION = "0.0.0";
     private static String token;
     private static String ownerId;
+    private static String testingGuildId;
 
     public static void init() throws IOException
     {
-        try(FileInputStream propFile = new FileInputStream("config.properties"))
+        try(FileInputStream propFile = new FileInputStream("bot.properties"))
         {
             Properties prop = new Properties();
             prop.load(propFile);
             token = prop.getProperty("bot_token");
             ownerId = prop.getProperty("owner_id");
+            testingGuildId = prop.getProperty("testing_guild_id", "0");
         }
     }
 
@@ -40,5 +42,10 @@ public class ConfigManager
     public static String getOwnerId()
     {
         return ownerId;
+    }
+
+    public static String getTestingGuildId()
+    {
+        return testingGuildId;
     }
 }

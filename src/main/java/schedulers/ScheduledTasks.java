@@ -10,7 +10,6 @@ public class ScheduledTasks extends ListenerAdapter
     @Override
     public void onReady(@NotNull ReadyEvent event)
     {
-        //set jda to logger
-        LoggerManager.setJda(event.getJDA());
+        //put anything that needs to be initialized when the bot is ready
     }
 }

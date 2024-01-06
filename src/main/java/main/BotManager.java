@@ -36,8 +36,8 @@ public class BotManager
             new Ping()
         );
 
-        // TODO ONLY FOR TESTING
-        client.forceGuildOnly("695074147071557632");
+        // ONLY FOR TESTING, uncomment when testing
+        client.forceGuildOnly(ConfigManager.getTestingGuildId());
 
         DefaultShardManagerBuilder.createLight(ConfigManager.getToken())
                                   .setStatus(OnlineStatus.DO_NOT_DISTURB)
