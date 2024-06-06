@@ -2,3 +2,5 @@
 bot_token=
 owner_id=
 testing_guild_id=
+exception_channel_id=
+log_channel_id=

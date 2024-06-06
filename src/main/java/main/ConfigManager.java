@@ -11,6 +11,8 @@ public class ConfigManager
     private static String token;
     private static String ownerId;
     private static String testingGuildId;
+    private static String logChannel;
+    private static String exceptionChannel;
 
     public static void init() throws IOException
     {
@@ -21,6 +23,8 @@ public class ConfigManager
             token = prop.getProperty("bot_token");
             ownerId = prop.getProperty("owner_id");
             testingGuildId = prop.getProperty("testing_guild_id", "0");
+            logChannel = prop.getProperty("log_channel_id", "0");
+            exceptionChannel = prop.getProperty("exception_channel_id", "0");
         }
     }
 
@@ -47,5 +51,15 @@ public class ConfigManager
     public static String getTestingGuildId()
     {
         return testingGuildId;
+    }
+
+    public static String getLogChannel()
+    {
+        return logChannel;
+    }
+
+    public static String getExceptionChannel()
+    {
+        return exceptionChannel;
     }
 }

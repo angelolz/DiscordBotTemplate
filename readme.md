@@ -17,6 +17,8 @@ This project comes with a few dependencies that will aid in the development of t
   - `bot_token` - Token used for the bot to login. You can get this in your [developer dashboard](https://discord.com/developers/applications).
   - `owner_id` - Typically, this would be your Discord ID.
   - `testing_guild_id` - This is where your slash commands will be applied to when testing them.
+  - `exception_channel_id` - This is a text channel ID where the bot will post here every time you log an error.
+  - `log_channel_id` - This is a text channel ID where the bot will post here for other log types (like info or debug).
 - Remove the `.example` part in the `db.properties.example` file. Fill in the required fields:
   - Change the `DATABASE_NAME_HERE` part to your database name in the URL.
   - Put your username and password.

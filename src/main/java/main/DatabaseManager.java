@@ -2,6 +2,7 @@ package main;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import enums.LogLevel;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -16,7 +17,7 @@ public class DatabaseManager
         HikariConfig cfg = new HikariConfig(configFile);
         ds = new HikariDataSource(cfg);
         ds.getConnection();
-        LoggerManager.getLogger().info("Connected to database successfully!");
+        LoggerManager.sendLogMessage(LogLevel.INFO, "Connected to database successfully!");
     }
 
     public static Connection getConnection() throws SQLException
